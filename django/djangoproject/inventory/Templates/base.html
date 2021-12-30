@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'inventory/styles.css' %}">
+</head>
+<body>
+{% block container %}{% endblock %}
+</body>
+</html>

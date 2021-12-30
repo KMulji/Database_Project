@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Latest Orders{% endblock %}
+
+{% block container %}
+
+<h1>Latest Orders</h1>
+<!-- <h1>Order is : {{Order.id}}</h1> -->
+<table>
+<tr><th>Order ID</th><th>Order Date Placed</th><th>Customer</th></tr>
+
+{% for Order in Orders %}
+  <tr>
+   
+    <td><a href="http://localhost:8080/inventory/orders/{{Order.id}}">Click to view</a></td>
+    <td>{{Order.DatePlaced}}</td>
+    <td>{{Order.Customer.Name}}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% endblock %}

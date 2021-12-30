@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Latest Products{% endblock %}
+
+{% block container %}
+
+<h2>Customer Contact Info</h2>
+<h3>Customer Name:{{Order.Customer.Name}}</h3>
+<h3>Email: {{Order.Customer.Email}} </h3>
+<h3>Address: {{Order.Customer.Address}} </h3>
+<h3>Phone Number: {{Order.Customer.PhoneNumber}} </h3>
+<table>
+<tr><th>Product Name</th><th>Quantity</th><th>Selling Price</th><th>Sub Total</th></tr>
+
+{% for Po in Pos %}
+  <tr>
+    <td>{{Po.Product.Name}}</td>
+    <td>{{Po.Quantity}}</td>
+    <td>{{Po.Product.SellingPrice}}</td>
+    <td>{% widthratio Po.Product.SellingPrice 1 Po.Quantity %}</td>   
+    <!-- <td>{{Po.Product.SellingPrice}}*{{Po.Quantity}}</td> -->
+  </tr>
+{% endfor %}
+</table>
+
+<div>
+  <h2>Total: {{GrandTotal}}</h2> 
+</div>
+
+{% endblock %}
