@@ -1,6 +1,6 @@
 
 # About
-Used the starter project for Clark's Databases course (CSCI 220) and created the inventory management system.
+Used the starter project for Clark's Databases course (CSCI 220) and created the inventory management system. Use instructions below from professor to setup and run project. The database is managed on Django admin interface (http://localhost:8080/admin/) and the project views can be seen on http://localhost:8080/inventory/orders/
 
 # Django Examples
 
