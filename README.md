@@ -1,3 +1,7 @@
+
+# About
+Used the starter project for Clark's Databases course (CSCI 220) and created the inventory management system.
+
 # Django Examples
 
 A starter project for Clark's Databases course (CSCI 220). This project includes a web server and database.
